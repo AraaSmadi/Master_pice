@@ -60,14 +60,15 @@
 
     <!-- Card deck -->
     <div class="card-deck row">
-
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        @foreach ($data as $value)
+        <div class="col-xs-12 col-sm-6 col-md-4 mt-5">
             <!-- Card -->
             <div class="card">
 
                 <!--Card image-->
                 <div class="view overlay">
-                    <img class="card-img-top" src="img/photo.jpg" alt="Card image cap">
+
+                   <img class="card-img-top"   src="{{$value->Image}}"  alt="Card image cap">
                     <a href="#!">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -77,7 +78,7 @@
                 <div class="card-body">
 
                     <!--Title-->
-                    <h4 class="card-title">Photographer</h4>
+                    <h4 class="card-title">{{$value->name}}</h4>
                     <!--Text-->
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
@@ -88,233 +89,14 @@
             </div>
             <!-- Card -->
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <!-- Card -->
-            <div class="card">
+        @endforeach
 
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="img/photo.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!--Card content-->
-                <div class="card-body">
-
-                    <!--Title-->
-                    <h4 class="card-title">Photographer</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                        Appointment</button>
-                </div>
-            </div>
-            <!-- Card -->
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <!-- Card -->
-            <div class="card">
-
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="img/photo.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!--Card content-->
-                <div class="card-body">
-
-                    <!--Title-->
-                    <h4 class="card-title">Photographer</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                        Appointment</button>
-                </div>
-            </div>
-            <!-- Card -->
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <!-- Card -->
-            <div class="card">
-
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="img/photo.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!--Card content-->
-                <div class="card-body">
-
-                    <!--Title-->
-                    <h4 class="card-title">Photographer</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                        Appointment</button>
-                </div>
-            </div>
-            <!-- Card -->
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <!-- Card -->
-            <div class="card">
-
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="img/photo.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!--Card content-->
-                <div class="card-body">
-
-                    <!--Title-->
-                    <h4 class="card-title">Photographer</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                        Appointment</button>
-                </div>
-            </div>
-            <!-- Card -->
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <!-- Card -->
-            <div class="card">
-
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="img/photo.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!--Card content-->
-                <div class="card-body">
-
-                    <!--Title-->
-                    <h4 class="card-title">Photographer</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                        Appointment</button>
-                </div>
-            </div>
-            <!-- Card -->
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <!-- Card -->
-            <div class="card">
-
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="img/photo.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!--Card content-->
-                <div class="card-body">
-
-                    <!--Title-->
-                    <h4 class="card-title">Photographer</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                        Appointment</button>
-                </div>
-            </div>
-            <!-- Card -->
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <!-- Card -->
-            <div class="card">
-
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="img/photo.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!--Card content-->
-                <div class="card-body">
-
-                    <!--Title-->
-                    <h4 class="card-title">Photographer</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                        Appointment</button>
-                </div>
-            </div>
-            <!-- Card -->
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <!-- Card -->
-            <div class="card mb-4">
-
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="card-img-top" src="img/printer.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!--Card content-->
-                <div class="card-body">
-
-                    <!--Title-->
-                    <h4 class="card-title ">Laibrary</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make
-                        Appointment</button>
-
-                </div>
-
-
-
-
-            </div>
-            <!-- Card deck -->
-        </div>
 
     </div>
 </div>
         </div>
         <!-- catogry end -->
-        <nav aria-label="Page navigation example">
+        {{-- <nav aria-label="Page navigation example mt-5">
             <ul class="pagination justify-content-center">
               <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -326,7 +108,7 @@
                 <a class="page-link" href="#">Next</a>
               </li>
             </ul>
-          </nav>
+          </nav> --}}
 
 
 

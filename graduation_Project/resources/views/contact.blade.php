@@ -28,30 +28,44 @@
                         <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Contact</h6>
                         <h1 class="mb-4">Contact US</h1>
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate" action="{{route('contact')}}" method="POST">
+                            @csrf
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name"
+                                    <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name" name="name"
                                         required="required" data-validation-required-message="Please enter your name" />
                                     <p class="help-block text-danger"></p>
+                                    @error('name')
+                                    <div style="color: #ff0000;">{{$message}}</div>
+                                  @enderror
+
                                 </div>
                                 <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control border-0 p-4" id="email" placeholder="Your Email"
+                                    <input type="email" class="form-control border-0 p-4" id="email" placeholder="Your Email" name="email"
                                         required="required" data-validation-required-message="Please enter your email" />
                                     <p class="help-block text-danger"></p>
                                 </div>
+                                @error('email')
+                        <div style="color: #ff0000;">{{$message}}</div>
+                      @enderror
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject"
+                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject" name="subject"
                                     required="required" data-validation-required-message="Please enter a subject" />
                                 <p class="help-block text-danger"></p>
+                                @error('Subject')
+                        <div style="color: #ff0000;">{{$message}}</div>
+                      @enderror
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" placeholder="Message"
+                                <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" placeholder="Message"  name="message"
                                     required="required"
                                     data-validation-required-message="Please enter your message"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
+                            @error('message')
+                        <div style="color: #ff0000;">{{$message}}</div>
+                      @enderror
                             <div>
                                 <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send
                                     Message</button>

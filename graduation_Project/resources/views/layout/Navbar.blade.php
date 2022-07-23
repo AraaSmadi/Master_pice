@@ -74,11 +74,12 @@
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
                     <a href="\" class="nav-item nav-link active">Home</a>
-                    <a href="\photographer" class="nav-item nav-link">Photographer</a>
+                    <a href="\photographers" class="nav-item nav-link">Photographer</a>
                     <a href="\about" class="nav-item nav-link">About</a>
-                    <a href="\service" class="nav-item nav-link">Services</a>
-                    <a href="\price" class="nav-item nav-link">Pricing</a>
-                    <div class="nav-item dropdown">
+                    {{-- <a href="\service" class="nav-item nav-link">Services</a> --}}
+                    {{-- <a href="\price" class="nav-item nav-link">Pricing</a> --}}
+
+                    {{-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="\appointment" class="dropdown-item">Appointment</a>
@@ -86,11 +87,20 @@
                             <a href="\team" class="dropdown-item">Our Team</a>
 
                         </div>
-                    </div>
+                    </div> --}}
                     <a href="\contact" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary d-none d-lg-block">Book Now</a>
-            </div>
+                {{-- @if (!Session::has('id')) --}}
+                <a href="\registeration" class="btn btn-primary d-none d-lg-block " style="border-radius: 60px">register</a>
+                <a href="\Login" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Login</a>
+{{-- @else --}}
+       <a href="\" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Logout</a>
+
+<a href="\" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Profile</a>
+
+
+{{-- @endif --}}
+</div>
         </nav>
     </div>
     <!-- Navbar End -->
