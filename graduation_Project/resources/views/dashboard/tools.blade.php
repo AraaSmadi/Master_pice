@@ -36,6 +36,12 @@
             </div>
             <form class="forms-sample"  action="{{route('tools')}}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                  {{ $message }}
+                  </div>
+              @endif
+
                 <div class="row">
                     <div class="col-md-6 grid-margin stretch-card">
                         <div class="card">

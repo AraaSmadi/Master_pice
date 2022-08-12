@@ -14,6 +14,9 @@ use  App\Http\Controllers\AdmainController;
 |
 */
 
+// Route::get('/single', function () {
+//     return view('singlephot');
+// });
 Route::get('/', function () {
     return view('index');
 });
@@ -89,6 +92,12 @@ Route::get('/error-500', function () {
 Route::get('/reservition', function () {
     return view('dashboard.reservition');
 });
+Route::get('/messages', function () {
+    return view('dashboard.messages');
+});
+Route::get('/comments', function () {
+    return view('dashboard.comments');
+});
 
 
 
@@ -143,6 +152,8 @@ Route::post('contact', [UserController::class,'contact'])->name('contact');
 Route::get('/time', function () {
     return view('dashboard.time');
 });
-Route::view('time', 'times');
+Route::get('times', [AdmainController::class,'Time']);
 Route::post('time', [AdmainController::class,'Time'])->name('times');
 // end time
+Route::get('/singlePage/{id}', [UserController::class,'singlePage'])->name('singlePage');
+

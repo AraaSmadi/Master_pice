@@ -46,7 +46,7 @@
       {{ $message }}
       </div>
   @endif
-                        <form class="forms-sample" action="{{route('times')}}" method="POST">
+                        <form class="forms-sample" action="time" action="{{route('times')}}" method="POST">
                             @csrf
                                 <div class="form-group">
                                     <label for="exampleInputUsername1">Date: </label>
@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Day: </label>
                                     <input type="text" class="form-control" id="exampleInputEmail1" name="day"
-                                        placeholder="Email">
+                                        placeholder="Day">
 
                                         @error('day')
                                         <div style="color: #ff0000;">{{$message}}</div>
@@ -67,15 +67,15 @@
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Hour : </label>
                                      <input type="text" class="form-control" id="exampleInputPassword1" name="hour"
-                                        placeholder="Password">
+                                        placeholder="Hour">
                                 </div>
                                 @error('hour')
                                 <div style="color: #ff0000;">{{$message}}</div>
                               @enderror
                                 <div class="form-group">
                                     <label for="exampleInputConfirmPassword1">Price per hour : </label>
-                                    <input type="text" class="form-control" id="exampleInputConfirmPassword1" name="hour"
-                                        placeholder="Password">
+                                    <input type="text" class="form-control" id="exampleInputConfirmPassword1" name="price"
+                                        placeholder="Price">
                                 </div>
                                 @error('price')
                                 <div style="color: #ff0000;">{{$message}}</div>

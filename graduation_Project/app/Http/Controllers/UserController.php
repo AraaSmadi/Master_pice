@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\users;
 use App\Models\message;
+use App\Models\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -119,7 +120,11 @@ class UserController extends BaseController
         $messages->save();
         return redirect("/contact")->with('success', 'User has been added successfully');
     }
-
+public function singlePage($id){
+$user=User::find($id);
+// dd($user);
+return view('singlephot',compact('user'));
+}
 
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

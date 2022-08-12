@@ -20,6 +20,7 @@
     <!-- Card deck -->
     <div class="card-deck row">
         @foreach ($data as $value)
+
         <div class="col-xs-12 col-sm-6 col-md-4 mt-5">
             <!-- Card -->
             <div class="card">
@@ -42,11 +43,12 @@
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Show</button>
+                  <a href="{{route('singlePage',['id'=>$value->id])}}"> <button class="btn btn-primary btn-block"  style="height: 47px;">Show</button></a>
                 </div>
             </div>
             <!-- Card -->
         </div>
+   
         @endforeach
 
 

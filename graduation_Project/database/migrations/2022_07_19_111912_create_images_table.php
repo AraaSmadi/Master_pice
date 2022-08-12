@@ -15,14 +15,14 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('image1');
-            $table->string('image2');
-            $table->string('image3');
-            $table->dateTime('image4');
-            $table->string('tool1');
-            $table->string('tool2');
-            $table->string('tool3');
-            $table->string('tool4');
+            $table->string('image1')->nullable();
+            $table->string('image2')->nullable();
+            $table->string('image3')->nullable();
+            $table->dateTime('image4')->nullable();
+            $table->string('tool1')->nullable();
+            $table->string('tool2')->nullable();
+            $table->string('tool3')->nullable();
+            $table->string('tool4')->nullable();
             $table->string('describtion');
             $table->bigInteger('user_id')->nullable(false)->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

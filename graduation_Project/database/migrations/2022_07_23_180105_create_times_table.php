@@ -18,10 +18,10 @@ class CreateTimesTable extends Migration
             $table->date('date');
             $table->string('day');
             $table->string('hour');
-            $table->dateTime('price');
+            $table->string('price');
             $table->bigInteger('user_id')->nullable(false)->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-
+            $table->timestamps();
         });
     }
 

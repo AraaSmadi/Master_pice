@@ -22,113 +22,132 @@
 
 <body>
     @include('dashboard.layout.Navbar')
-    <!-- partial -->
+
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="page-header">
-                <h3 class="page-title"> Form elements </h3>
+                <h3 class="page-title"> Photographer </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+                        <li class="breadcrumb-item"><a href="#">dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Reservition</li>
                     </ol>
                 </nav>
             </div>
             <div class="row">
-                <div class="col-md-6 grid-margin stretch-card">
+                <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Default form</h4>
-                            <p class="card-description"> Basic form layout </p>
-                            <form class="forms-sample">
-                                <div class="form-group">
-                                    <label for="exampleInputUsername1">Username</label>
-                                    <input type="text" class="form-control" id="exampleInputUsername1"
-                                        placeholder="Username">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputConfirmPassword1">Confirm Password</label>
-                                    <input type="password" class="form-control" id="exampleInputConfirmPassword1"
-                                        placeholder="Password">
-                                </div>
-                                <div class="form-check form-check-flat form-check-primary">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input"> Remember me </label>
-                                </div>
-                                <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
-                                <button class="btn btn-light">Cancel</button>
-                            </form>
+                            <h4 class="card-title">User</h4>
+                            <p class="card-description"> <code></code>
+                            </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th> # </th>
+                                        <th> Name </th>
+                                        <th> Phone </th>
+                                        <th> Email </th>
+                                        <th> Image </th>
+                                        <th> Action </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{-- @foreach ($data as $value)
+                                    <tr>
+                                        <td>{{ $value->id}}</td>
+                                        <td>{{ $value->name}}</td>
+                                        <td>{{ $value->phone}}</td>
+                                        <td>{{ $value->email}}</td>
+
+                                        <td><label class="badge badge-danger"><img src="{{ $value->Image}}"></label></td>
+                                        <td>
+                                            <a class="btn btn-danger" href={{"rejected/".$value->id}} > Rejected </a>
+                                            <a class="btn btn-info" href={{"accepted/".$value->id}}> Accepted </a>
+                                        </td>
+                                    </tr>
+                                    @endforeach --}}
+
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 grid-margin stretch-card">
+                <div class="col-lg-6 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Horizontal Form</h4>
-                            <p class="card-description"> Horizontal form layout </p>
-                            <form class="forms-sample">
-                                <div class="form-group row">
-                                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Email</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="exampleInputUsername2"
-                                            placeholder="Username">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
-                                    <div class="col-sm-9">
-                                        <input type="email" class="form-control" id="exampleInputEmail2"
-                                            placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="exampleInputMobile"
-                                            placeholder="Mobile number">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Password</label>
-                                    <div class="col-sm-9">
-                                        <input type="password" class="form-control" id="exampleInputPassword2"
-                                            placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">Re
-                                        Password</label>
-                                    <div class="col-sm-9">
-                                        <input type="password" class="form-control" id="exampleInputConfirmPassword2"
-                                            placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="form-check form-check-flat form-check-primary">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input"> Remember me </label>
-                                </div>
-                                <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
-                                <button class="btn btn-light">Cancel</button>
-                            </form>
+                            <h4 class="card-title"> User accepted </h4>
+                            <p class="card-description">  <code></code>
+                            </p>
+                            <table class="table">
+                                <thead>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>Image</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{-- @foreach ($data2 as $value)
+                                    <tr>
+                                        <td>{{ $value->id}}</td>
+                                        <td>{{ $value->name}}</td>
+                                        <td>{{ $value->phone}}</td>
+                                        <td>{{ $value->email}}</td>
+
+                                        <td><label class="badge badge-danger"><img src="{{ $value->Image}}"></label></td>
+
+                                    </tr>
+                                    @endforeach --}}
+
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"> User Rejected </h4>
+                            <p class="card-description">  <code></code>
+                            </p>
+                            <table class="table table-hover">
+                                <thead>
+
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>Image</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{-- @foreach ($data3 as $value)
+                                    <tr>
+                                        <td>{{ $value->id}}</td>
+                                        <td>{{ $value->name}}</td>
+                                        <td>{{ $value->phone}}</td>
+                                        <td>{{ $value->email}}</td>
+
+                                        <td><label class="badge badge-danger"><img src="{{ $value->Image}}"></label></td>
+
+                                    </tr>
+                                    @endforeach --}}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
             </div>
         </div>
-    </div>
-    </div>
-
-    </div>
     </div>
     <!-- content-wrapper ends -->
     <!-- partial:../../partials/_footer.html -->
@@ -159,7 +178,6 @@
     <script src="../../assets/js/misc.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="../../assets/js/file-upload.js"></script>
     <!-- End custom js for this page -->
 </body>
 

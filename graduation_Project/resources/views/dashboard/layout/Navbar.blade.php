@@ -172,19 +172,7 @@
               <i class="mdi mdi-home menu-icon"></i>
             </a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <span class="menu-title">Basic UI Elements</span>
-              <i class="menu-arrow"></i>
-              <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/buttons">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/typography">Typography</a></li>
-              </ul>
-            </div>
-          </li> --}}
+
           <li class="nav-item">
             <a class="nav-link" href="/users">
               <span class="menu-title">Users</span>
@@ -215,19 +203,19 @@
               <i class="mdi mdi-table-large menu-icon"></i>
             </a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="/basic_elements">
-              <span class="menu-title">Forms</span>
-              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/chartjs">
-              <span class="menu-title">Charts</span>
-              <i class="mdi mdi-chart-bar menu-icon"></i>
-            </a>
-          </li>
- --}}
+
+ <li class="nav-item">
+    <a class="nav-link" href="/messages">
+      <span class="menu-title">Messages</span>
+      <i class="mdi mdi-table-large menu-icon"></i>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/comments">
+      <span class="menu-title">Comments</span>
+      <i class="mdi mdi-table-large menu-icon"></i>
+    </a>
+  </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
               <span class="menu-title">Admain</span>
