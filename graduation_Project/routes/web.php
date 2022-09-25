@@ -169,7 +169,7 @@ Route::post('time', [AdmainController::class,'Time'])->name('times');
 
 //singlePage
 Route::get('/singlePage/{id}', [UserController::class,'singlePage'])->name('singlePage');
-Route::post('/singlephot', [UserController::class,'imagesTime']);
+Route::get('/singlephot', [UserController::class,'imagesTime']);
 Route::get('/Booking/{id}', [UserController::class,'Booking'])->name('Booking');
 Route::post('/book', [UserController::class,'reserve'])->name('book');
 

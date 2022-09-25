@@ -151,7 +151,7 @@ class UserController extends BaseController
     {
         $data1 = time::all()->where('user_id', $id);
         $data2 = images::all()->where('user_id', $id);
-        return view('singlephot', compact('data1' , 'data2'));
+        return view('/singlephot', compact('data1' , 'data2'));
     }
 
 

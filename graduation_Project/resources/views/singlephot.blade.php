@@ -26,6 +26,7 @@
 
                 </div> --}}
             </div>
+            
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="margin-top:50px">
                 <div class="h-100">
                     <h1 class="display-6 mb-4" style=" color:#f9a392 ">About</h1>
