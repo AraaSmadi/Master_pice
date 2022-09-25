@@ -1,32 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Purple Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
-</head>
-
-<body>
     @include('dashboard.layout.Navbar')
 
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="page-header">
-                <h3 class="page-title"> Photographer </h3>
+                <h3 class="page-title"> Reservition </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">dashboard</a></li>
@@ -48,25 +26,27 @@
                                         <th> Name </th>
                                         <th> Phone </th>
                                         <th> Email </th>
-                                        <th> Image </th>
+                                        <th> date </th>
+                                        <th> hour </th>
                                         <th> Action </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($data as $value)
+                                    @foreach ($data as $value)
                                     <tr>
                                         <td>{{ $value->id}}</td>
                                         <td>{{ $value->name}}</td>
                                         <td>{{ $value->phone}}</td>
                                         <td>{{ $value->email}}</td>
+                                        <td>{{ $value->date}}</td>
+                                        <td>{{ $value->hour}}</td>
 
-                                        <td><label class="badge badge-danger"><img src="{{ $value->Image}}"></label></td>
                                         <td>
-                                            <a class="btn btn-danger" href={{"rejected/".$value->id}} > Rejected </a>
-                                            <a class="btn btn-info" href={{"accepted/".$value->id}}> Accepted </a>
+                                            <a class="btn btn-danger" href={{"rejectedbook/".$value->id}} > Rejected </a>
+                                            <a class="btn btn-info" href={{"acceptedbook/".$value->id}}> Accepted </a>
                                         </td>
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
 
                                 </tbody>
                             </table>
@@ -83,25 +63,26 @@
                                 <thead>
 
                                     <tr>
-                                        <th>#</th>
-                                        <th>Name</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
-                                        <th>Image</th>
+                                        <th> # </th>
+                                        <th> Name </th>
+                                        <th> Phone </th>
+                                        <th> Email </th>
+                                        <th> date </th>
+                                        <th> hour </th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($data2 as $value)
+                                    @foreach ($data2 as $value)
                                     <tr>
                                         <td>{{ $value->id}}</td>
                                         <td>{{ $value->name}}</td>
                                         <td>{{ $value->phone}}</td>
                                         <td>{{ $value->email}}</td>
-
-                                        <td><label class="badge badge-danger"><img src="{{ $value->Image}}"></label></td>
-
+                                        <td>{{ $value->date}}</td>
+                                        <td>{{ $value->hour}}</td>
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
 
                                 </tbody>
                             </table>
@@ -118,25 +99,26 @@
                                 <thead>
 
                                     <tr>
-                                        <th>#</th>
-                                        <th>Name</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
-                                        <th>Image</th>
+                                        <th> # </th>
+                                        <th> Name </th>
+                                        <th> Phone </th>
+                                        <th> Email </th>
+                                        <th> date </th>
+                                        <th> hour </th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($data3 as $value)
+                                    @foreach ($data3 as $value)
                                     <tr>
                                         <td>{{ $value->id}}</td>
                                         <td>{{ $value->name}}</td>
                                         <td>{{ $value->phone}}</td>
                                         <td>{{ $value->email}}</td>
-
-                                        <td><label class="badge badge-danger"><img src="{{ $value->Image}}"></label></td>
-
+                                        <td>{{ $value->date}}</td>
+                                        <td>{{ $value->hour}}</td>
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
 
                                 </tbody>
                             </table>

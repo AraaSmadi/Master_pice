@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>SPA Center - Beauty & Spa HTML Template</title>
+    <title>Khariyj</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -66,14 +66,14 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-primary"><span class="text-dark">SPA</span> Center</h1>
+                <img src="../../img/logo.png" width="90px">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="\" class="nav-item nav-link active">Home</a>
+                    <a href="\" class="nav-item nav-link">Home</a>
                     <a href="\photographers" class="nav-item nav-link">Photographer</a>
                     <a href="\about" class="nav-item nav-link">About</a>
                     {{-- <a href="\service" class="nav-item nav-link">Services</a> --}}
@@ -90,16 +90,25 @@
                     </div> --}}
                     <a href="\contact" class="nav-item nav-link">Contact</a>
                 </div>
-                {{-- @if (!Session::has('id')) --}}
-                <a href="\registeration" class="btn btn-primary d-none d-lg-block " style="border-radius: 60px">register</a>
-                <a href="\Login" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Login</a>
-{{-- @else --}}
-       <a href="\" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Logout</a>
+                @if (session()->has('name') && session()->has('id') && session()->get('role') == 5)
+                <a href="/logout" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Logout</a>
 
-<a href="\" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Profile</a>
+                <a href="\profile" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Profile</a>
+                @elseif (session()->has('name') && session()->has('id') && session()->get('role') == 3 || session()->get('role') == 1)
+                <a href="/logout" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Logout</a>
+
+                <a href="/dashboard" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:120px;">dashboard</a>
+                @elseif (session()->has('name') && session()->has('id') && session()->get('role') == 2)
+                <a href="/logout" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Logout</a>
 
 
-{{-- @endif --}}
+                 @else
+
+<a href="\registeration" class="btn btn-primary d-none d-lg-block " style="border-radius: 60px">register</a>
+<a href="\Login" class="btn btn-primary d-none d-lg-block" style="border-radius: 60px ; margin-left:10px; width:90px;">Login</a>
+
+
+@endif
 </div>
         </nav>
     </div>

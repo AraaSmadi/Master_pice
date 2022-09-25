@@ -20,9 +20,10 @@ class CreateReservetionsTable extends Migration
             $table->string('phone');
             $table->dateTime('date');
             $table->string('hour');
+            $table->integer('role');
             $table->bigInteger('user_id')->nullable(false)->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-           
+
             $table->timestamps();
 
         });

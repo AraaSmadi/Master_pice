@@ -1,66 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Purple Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
-</head>
 
-<body>
     @include('dashboard.layout.Navbar')
-    <!-- partial -->
+    {{-- <!-- partial -->
+    <div class="container">
+        <div class="card-group vgr-cards">
+          <div class="card">
+            <div class="card-img-body">
 
-    <div class="container mt-2">
-        <!--   <div class="card card-block mb-2">
-            <h4 class="card-title">Card 1</h4>
-            <p class="card-text">Welcom to bootstrap card styles</p>
-            <a href="#" class="btn btn-primary">Submit</a>
-          </div>   -->
-          <div class="row">
-            <div class="col-md-3 col-sm-6 item">
-              <div class="card item-card card-block">
-            <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
-                <h5 class="item-card-title mt-3 mb-3">Sierra Web Development • Owner</h5>
-                <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
-          </div>
             </div>
-            {{-- <div class="col-md-3 col-sm-6 item">
-              <div class="card item-card card-block">
-            <img src="https://static.pexels.com/photos/7357/startup-photos.jpg" alt="Photo of sunset">
-                <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                <p class="card-text">This is a company that builds websites, web .</p>
-          </div>
-            </div>
-            <div class="col-md-3 col-sm-6 item">
-              <div class="card item-card card-block">
-            <img src="https://static.pexels.com/photos/262550/pexels-photo-262550.jpeg" alt="Photo of sunset">
-                <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
-          </div>
-            </div> --}}
-            <div class="col-md-3 col-sm-6 item">
-              <div class="card item-card card-block">
-            <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
-                <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
-          </div>
-            </div>
-          </div>
+            @foreach ($data as $value)
 
+            <div class="card-body">
+              <h4 class="card-title">{{$value->name}}</h4>
+              <h6 class="card-title">{{$value->subject}}</h6>
+              <p class="card-text">{{ $value->message}}</p>
+
+            </div>
+          </div>
+          @endforeach
+
+        </div>
+      </div> --}}
+ <!--start-->
+ <div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title"> Comments </h3>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Comments</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Comments</h4>
+            <p class="card-description"> <code></code>
+            </p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th> # </th>
+                        <th> Name </th>
+                        <th> subject </th>
+                        <th> message </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Ara'a</td>
+                        <td>Hello</td>
+                        <td>Amazing work</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
         </div>
 
 

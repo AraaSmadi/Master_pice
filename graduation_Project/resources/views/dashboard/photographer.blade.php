@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Purple Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
-</head>
-
-<body>
     @include('dashboard.layout.Navbar')
 
     <div class="main-panel">
@@ -62,8 +40,8 @@
 
                                         <td><label class="badge badge-danger"><img src="{{ $value->Image}}"></label></td>
                                         <td>
-                                            <a class="btn btn-danger" href={{"rejected/".$value->id}} > Rejected </a>
-                                            <a class="btn btn-info" href={{"accepted/".$value->id}}> Accepted </a>
+                                            <a class="btn btn-danger" href="{{route('reject',['id'=>$value->id])}}" > Rejected </a>
+                                            <a class="btn btn-info" href="{{route('accept',['id'=>$value->id])}}"> Accepted </a>
                                         </td>
                                     </tr>
                                     @endforeach

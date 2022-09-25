@@ -1,10 +1,31 @@
-<div class=" container-scroller">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Khariyj Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
+  </head>
+  <body>
+    <div class=" container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="/dashboard"><img src="../../assets/images/logo.svg" alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="/dashboard"><img src="../../assets/images/logo-mini.svg" alt="logo" /></a>
-      </div>
+      {{-- <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"> --}}
+        <a class="navbar-brand brand-logo" href="/dashboard"><img src="../../assets/images/logo.png" width='50%' alt="logo" style="margin-left:80%" /></a>
+
+      {{-- </div> --}}
       <div class="navbar-menu-wrapper d-flex align-items-stretch">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
           <span class="mdi mdi-menu"></span>
@@ -172,19 +193,22 @@
               <i class="mdi mdi-home menu-icon"></i>
             </a>
           </li>
-
+          @if (session()->has('name') && session()->has('id') && session()->get('role') == 1)
           <li class="nav-item">
             <a class="nav-link" href="/users">
               <span class="menu-title">Users</span>
               <i class="mdi mdi-contacts menu-icon"></i>
             </a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="/photographer">
               <span class="menu-title">Photographer</span>
               <i class="mdi mdi-table-large menu-icon"></i>
             </a>
           </li>
+          @endif
+          @if (session()->has('name') && session()->has('id') && session()->get('role') == 3)
           <li class="nav-item">
             <a class="nav-link" href="/tools">
               <span class="menu-title">Tools and works</span>
@@ -203,19 +227,24 @@
               <i class="mdi mdi-table-large menu-icon"></i>
             </a>
           </li>
-
+          @endif
+          @if (session()->has('name') && session()->has('id') && session()->get('role') == 1)
  <li class="nav-item">
     <a class="nav-link" href="/messages">
       <span class="menu-title">Messages</span>
       <i class="mdi mdi-table-large menu-icon"></i>
     </a>
   </li>
+  @endif
+  @if (session()->has('name') && session()->has('id') && session()->get('role') == 3)
   <li class="nav-item">
     <a class="nav-link" href="/comments">
       <span class="menu-title">Comments</span>
       <i class="mdi mdi-table-large menu-icon"></i>
     </a>
   </li>
+  @endif
+  @if (session()->has('name') && session()->has('id') && session()->get('role') == 1)
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
               <span class="menu-title">Admain</span>
@@ -230,6 +259,7 @@
               </ul>
             </div>
           </li>
+          @endif
           {{-- <li class="nav-item sidebar-actions">
             <span class="nav-link">
               <div class="border-bottom">

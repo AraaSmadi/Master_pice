@@ -6,7 +6,7 @@ use App\Models\time;
 use App\Http\Requests\StoretimeRequest;
 use App\Http\Requests\UpdatetimeRequest;
 
-class TimeController extends Controller
+class TimeController extends Controllers
 {
     /**
      * Display a listing of the resource.

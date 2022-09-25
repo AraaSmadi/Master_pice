@@ -1,15 +1,15 @@
  <!-- Footer Start -->
- <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 90px;">
+ <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 20px;">
     <div class="container pt-5">
         <div class="row">
             <div class="col-lg-6 pr-lg-5 mb-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="mb-3 text-white"><span class="text-primary">SPA</span> Center</h1>
+                    <img src="../../img/logo2.png" width="150px" style="margin-left: 80%">
                 </a>
                 <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Irbid , Jordan</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+092 777777777</p>
+                <p><i class="fa fa-envelope mr-2"></i>araa@gmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -59,11 +59,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
+                <p class="m-0 text-white">&copy; <a href="#">Khariyj</a>. All Rights Reserved.</p>
             </div>
-            <div class="col-md-6 text-center text-md-right">
+            {{-- <div class="col-md-6 text-center text-md-right">
                 <p class="m-0 text-white">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

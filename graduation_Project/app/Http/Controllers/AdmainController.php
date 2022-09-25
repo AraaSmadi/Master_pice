@@ -65,7 +65,7 @@ class AdmainController extends BaseController
         }
 
         $images->describtion = $req->describtion;
-        $images->user_id = 1;
+        $images->user_id = session()->get('id');
         $images->save();
         return redirect("/tools")->with('success', 'Tools has been added successfully');
     }
@@ -84,7 +84,7 @@ class AdmainController extends BaseController
         $time->day = $req->day;
         $time->hour = $req->hour;
         $time->price = $req->price;
-        $time->user_id = 1;
+        $time->user_id = session()->get('id');
         $time->save();
         return redirect("time")->with('success', 'Time has been added successfully');
     }

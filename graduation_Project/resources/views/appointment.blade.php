@@ -26,7 +26,7 @@
             </div>
             <div class="row justify-content-center bg-appointment mx-0">
                 <div class="col-lg-6 py-5">
-                    <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
+                    <div class="p-5 my-5" style="background: #211e1c14;">
                         <h1 class="text-white text-center mb-4">Make Appointment</h1>
                         <form>
                             <div class="form-row">

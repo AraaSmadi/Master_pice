@@ -185,7 +185,7 @@
             -moz-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.2);
             &.navbar-dropdown {
-              position: absolute;            
+              position: absolute;
               font-size: 0.9rem;
               margin-top: 0;
               .rtl & {
@@ -258,7 +258,7 @@
                 width: 10px;
                 height: 10px;
                 border-radius: 100%;
-                border: 2px solid #ceb3cbc4f;
+                border: 2px solid #f9a392;
                 bottom: 5px;
                 right: -5px;
                 &.online {
@@ -347,7 +347,7 @@
         color: $white;
         .nav-profile-text {
           p {
-            @extend .text-white;         
+            @extend .text-white;
           }
         }
         .search-field {

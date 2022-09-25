@@ -14,9 +14,9 @@ use  App\Http\Controllers\AdmainController;
 |
 */
 
-// Route::get('/single', function () {
-//     return view('singlephot');
-// });
+Route::get('/singlephot', function () {
+    return view('singlephot');
+});
 Route::get('/', function () {
     return view('index');
 });
@@ -56,7 +56,9 @@ Route::get('/basic-table', function () {
 Route::get('/blank-page', function () {
     return view('dashboard.blank-page');
 });
-
+Route::get('/profile', function () {
+    return view('profile');
+});
 
 Route::get('/users', function () {
     return view('dashboard.users');
@@ -89,16 +91,14 @@ Route::get('/error-404', function () {
 Route::get('/error-500', function () {
     return view('dashboard.error-500');
 });
-Route::get('/reservition', function () {
-    return view('dashboard.reservition');
-});
+
 Route::get('/messages', function () {
     return view('dashboard.messages');
 });
 Route::get('/comments', function () {
     return view('dashboard.comments');
 });
-
+Route::get('/messages',[UserController::class,'getmessage']);
 
 
 
@@ -122,9 +122,19 @@ Route::get('/photographer', function () {
     return view('dashboard.photographer');
 });
 Route::get('/photographer', [UserController::class,'photo_dashboard']);
-Route::get('rejected/{id}', [UserController::class,'rejected']);
-Route::get('accepted/{id}', [UserController::class,'accepted']);
+Route::get('rejected/{id}', [UserController::class,'rejected'])->name('reject');
+Route::get('accepted/{id}', [UserController::class,'accepted'])->name('accept');
 //photographer
+
+// start reservition dashboard
+
+Route::get('/reservition', function () {
+    return view('dashboard.reservition');
+});
+Route::get('/reservition', [UserController::class,'book_dashboard']);
+Route::get('rejectedbook/{id}', [UserController::class,'rejected_book']);
+Route::get('acceptedbook/{id}', [UserController::class,'accepted_book']);
+//reservition
 
 
 //users
@@ -155,5 +165,17 @@ Route::get('/time', function () {
 Route::get('times', [AdmainController::class,'Time']);
 Route::post('time', [AdmainController::class,'Time'])->name('times');
 // end time
-Route::get('/singlePage/{id}', [UserController::class,'singlePage'])->name('singlePage');
 
+
+//singlePage
+Route::get('/singlePage/{id}', [UserController::class,'singlePage'])->name('singlePage');
+Route::post('/singlephot', [UserController::class,'imagesTime']);
+Route::get('/Booking/{id}', [UserController::class,'Booking'])->name('Booking');
+Route::post('/book', [UserController::class,'reserve'])->name('book');
+
+//singlePage
+
+//logout
+Route::get('/logout' , [UserController::class , 'logout']);
+
+// Route::get('/service/{id}', UserController::class,'reservition');

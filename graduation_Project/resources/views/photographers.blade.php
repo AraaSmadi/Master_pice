@@ -1,7 +1,7 @@
 @include('layout.Navbar')
 
     <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;background: linear-gradient(#211e1c21, rgba(33, 40, 28, 0.7)), url(../img/carousel-3.jpeg), no-repeat center center;background-size: cover;"">
+    <div class="jumbotron jumbotron-fluid bg-jumbotron2" >
         <div class="container text-center py-5">
             <h3 class="text-white display-3 mb-4">Photographer</h3>
             <div class="d-inline-flex align-items-center text-white">
@@ -28,7 +28,7 @@
                 <!--Card image-->
                 <div class="view overlay">
 
-                   <img class="card-img-top" src="{{$value->Image}}" alt="Card image cap">
+                   <img class="card-img-top" src="{{$value->Image}}" alt="Card image cap" width="20%" height="50%">
                     <a href="#!">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -40,22 +40,22 @@
                     <!--Title-->
                     <h4 class="card-title">{{$value->name}}</h4>
                     <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p> --}}
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                  <a href="{{route('singlePage',['id'=>$value->id])}}"> <button class="btn btn-primary btn-block"  style="height: 47px;">Show</button></a>
+                  <a href="{{route('singlePage',['id'=>$value->id])}}"> <button class="btn btn-primary btn-block"  style="height: 47px;  text-decoration: none;">Make Appointment</button></a>
                 </div>
             </div>
             <!-- Card -->
         </div>
-   
+
         @endforeach
 
 
     </div>
 </div>
         </div>
-        <!-- catogry end -->
+        {{-- <!-- catogry end -->
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
               <li class="page-item disabled">
@@ -68,7 +68,7 @@
                 <a class="page-link" href="#">Next</a>
               </li>
             </ul>
-          </nav>
+          </nav> --}}
 
 
 
